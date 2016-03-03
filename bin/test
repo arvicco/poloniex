@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+$: << File.join(File.dirname(__FILE__), '..', 'lib')
+$: << File.join(File.dirname(__FILE__))
+
+require 'poloniex'
+require 'pp'
+
+Poloniex.setup do | config |
+    config.key = 'my api key'
+    config.secret = 'my secret token'
+end
+
+Poloniex.ticker
